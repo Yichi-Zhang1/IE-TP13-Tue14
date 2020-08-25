@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">IEProjectV2</string>
+
+    //main activity button
+    <string name="click_btn">Click</string>
+
+
+    //navigation bottom logo
+    <string name="nav_home">Home</string>
+    <string name="nav_hospital">Hospital</string>
+    <string name="nav_translator">Translator</string>
+    <string name="nav_aboutus">AboutUs</string>
+
+    //hospital fragment
+    <string name="choose_hospital">Please choose the hospital cooording to first letter</string>
+    <string name="locate_hospital">Find hospitals that near to you</string>
+    <string name="locate_hospital_btn">Nearest Hospitals</string>
+    <string name="title_activity_maps">Map</string>
+
+    //show on the map
+    <string name="current_location">Your current location</string>
+</resources>

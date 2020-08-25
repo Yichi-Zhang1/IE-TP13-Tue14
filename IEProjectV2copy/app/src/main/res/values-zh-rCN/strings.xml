@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IEProjectV2</string>
+    <string name="click_btn">点击</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_hospital">医院</string>
+    <string name="nav_translator">翻译</string>
+    <string name="nav_aboutus">关于我们</string>
+    <string name="choose_hospital">请根据首字母选择医院</string>
+    <string name="locate_hospital">找到离你最近的医院</string>
+    <string name="locate_hospital_btn">附近的医院</string>
+    <string name="title_activity_maps">地图</string>
+
+    //show on the map
+    <string name="current_location">您当前位置</string>
+</resources>
