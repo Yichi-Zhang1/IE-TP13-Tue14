@@ -1,4 +1,4 @@
-package com.example.ieprojectv2.fragment;
+package com.example.ieprojectv2.fragment.Map;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,20 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ieprojectv2.R;
-import com.example.ieprojectv2.storeClass.hospital;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.List;
-
-public class MapsFragment extends Fragment {
-    private LatLng userlocation;
-    private List<hospital> hospitalList;
+public class MapsFragment2 extends Fragment {
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -38,20 +32,9 @@ public class MapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            userlocation = hospital.getUserLocation();
-            hospitalList = hospital.getHospitalList();
-            float zoomLevel = (float) 10.0;
-
-            //mark user location
-            googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)).
-                    position(userlocation).title(getString(R.string.current_location)));
-
-            //mark nearest hospital
-            for(int i = 0; i < hospitalList.size(); i++){
-                googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)).
-                        position(hospitalList.get(i).getLatLng()).title(hospitalList.get(i).getName()));
-            }
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userlocation,zoomLevel));
+            LatLng sydney = new LatLng(-34, 151);
+            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         }
     };
 
@@ -60,7 +43,7 @@ public class MapsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        return inflater.inflate(R.layout.fragment_maps2, container, false);
     }
 
     @Override
@@ -72,5 +55,4 @@ public class MapsFragment extends Fragment {
             mapFragment.getMapAsync(callback);
         }
     }
-
 }

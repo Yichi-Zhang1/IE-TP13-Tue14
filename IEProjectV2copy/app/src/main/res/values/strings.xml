@@ -19,4 +19,5 @@
 
     //show on the map
     <string name="current_location">Your current location</string>
+    <string name="title_activity_maps_by_name">Map</string>
 </resources>

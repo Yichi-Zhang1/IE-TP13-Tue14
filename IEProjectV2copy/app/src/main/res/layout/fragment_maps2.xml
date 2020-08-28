@@ -12,20 +12,13 @@
         android:paddingRight="10dp"
         android:paddingTop="2dp"
         android:paddingBottom="5dp">
-        <Button
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:layout_marginRight="10dp"
-            android:text="Clinic" />
-        <Button
-            android:id="@+id/near_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Hospital"/>
+            android:hint="enter hospital name"/>
+
     </LinearLayout>
+
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -33,6 +26,5 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragment.Map.MapsFragment" />
-
+        tools:context=".fragment.Map.MapsFragment2" />
 </LinearLayout>

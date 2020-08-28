@@ -22,6 +22,7 @@ public class Hospital extends Fragment {
 
     private HospitalViewModel mViewModel;
     private Button near_btn;
+    private Button search_btn;
 
     public static Hospital newInstance() {
         return new Hospital();
@@ -44,6 +45,16 @@ public class Hospital extends Fragment {
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(view);
                 navController.navigate(R.id.action_nav_hospital_to_map_fragment);
+
+            }
+        });
+
+        search_btn = getActivity().findViewById(R.id.search_hospital_btn);
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(view);
+                navController.navigate(R.id.action_nav_hospital_to_mapsFragment2);
 
             }
         });

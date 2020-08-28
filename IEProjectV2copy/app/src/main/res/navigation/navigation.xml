@@ -18,10 +18,27 @@
         <action
             android:id="@+id/action_nav_hospital_to_map_fragment"
             app:destination="@id/map_fragment" />
+        <action
+            android:id="@+id/action_nav_hospital_to_mapsFragment2"
+            app:destination="@id/mapsFragment2" />
     </fragment>
     <fragment
         android:id="@+id/map_fragment"
-        android:name="com.example.ieprojectv2.fragment.MapsFragment"
+        android:name="com.example.ieprojectv2.fragment.Map.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/nav_translator"
+        android:name="com.example.ieprojectv2.fragment.Translator.Translator"
+        android:label="translator_fragment"
+        tools:layout="@layout/translator_fragment" />
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.ieprojectv2.fragment.AboutUs.AboutUs"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/mapsFragment2"
+        android:name="com.example.ieprojectv2.fragment.Map.MapsFragment2"
+        android:label="MapsFragment2" />
 </navigation>
